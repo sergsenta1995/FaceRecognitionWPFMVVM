@@ -1,0 +1,12 @@
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\bin\Debug\FaceRecognitionWPFMVVM.exe
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\bin\Debug\FaceRecognitionWPFMVVM.pdb
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM.csprojResolveAssemblyReference.cache
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\Views\MainWindow.baml
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\Views\MainWindow.g.cs
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\App.g.cs
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM_MarkupCompile.cache
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM.g.resources
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM.Properties.Resources.resources
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM.csproj.GenerateResource.Cache
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM.exe
+E:\workspace\FaceRecognitionWPFMVVM\FaceRecognitionWPFMVVM\obj\Debug\FaceRecognitionWPFMVVM.pdb
