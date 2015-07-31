@@ -39,18 +39,49 @@ namespace FaceRecognitionWPFMVVM.Models
 {
     class CImage
     {
+        // Нормальные (нормализованные) размеры для изображений-шаблонов.
+        const int GLOBAL_HEIGHT = 104;
+        const int GLOBAL_WIDTH  = 104;        
+
         public Image<Gray, Byte> grayImage { get; set; }
         public Image<Bgr,  Byte> bgrImage  { get; set; }
-        public string            patch     { get; set; }
+        public string            path      { get; set; }
+        public string            name      { get; set; }
 
-        public CImage( 
-            Image<Gray, Byte> _grayImage,
-            Image<Bgr, Byte>  _bgrImage,
-            string            _patch )
+        public CImage( string _patch, string _name )
         {
-            this.grayImage = _grayImage;
-            this.bgrImage  = _bgrImage;
-            this.patch     = _patch;
+            this.path = _patch;
+            this.name  = _name;
+        }
+
+        public int CreateGrayImage()
+        {
+            grayImage = new Image<Gray, byte>(name);
+
+            return 0;
+        }
+
+        public int CreateBgrImage()
+        {
+            bgrImage = new Image<Bgr, byte>(name);
+
+            return 0;
+        }
+
+        public int Normalization()
+        {
+            // Преобразование в оттенки серого.
+            grayImage = bgrImage.Convert<Gray, Byte>();
+            // Приводим к одному размеру.  
+            // TODO: Возможно написать адаптер для преобразования IntPtr -> Image
+            Image<Gray, Byte> imageProcessed = new Image<Gray, byte>(new System.Drawing.Size(bgrImage.Width, bgrImage.Height));
+            imageProcessed.Ptr = CvInvoke.cvCreateImage(new System.Drawing.Size(GLOBAL_WIDTH, GLOBAL_HEIGHT), IPL_DEPTH.IPL_DEPTH_8U, 1);
+            CvInvoke.cvResize(grayImage, imageProcessed, INTER.CV_INTER_LINEAR);
+            // Выравниваем гистограмму изображения.
+            CvInvoke.cvEqualizeHist(imageProcessed, imageProcessed);
+            grayImage = imageProcessed;
+
+            return 0;
         }
     }
 }

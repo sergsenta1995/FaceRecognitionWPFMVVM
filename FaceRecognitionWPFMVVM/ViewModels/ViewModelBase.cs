@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Input;
 
-namespace FaceRecognitionWPFMVVM.ViewModel
+namespace FaceRecognitionWPFMVVM.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

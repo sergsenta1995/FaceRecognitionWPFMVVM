@@ -97,7 +97,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\MainWindow.xaml">
+    <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -107,12 +107,17 @@
     </Compile>
     <Compile Include="Commands\CommandReference.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="Models\FaceRecognition.cs" />
+    <Compile Include="Models\FisherRecognition.cs" />
     <Compile Include="Models\Image.cs" />
-    <Compile Include="ViewModels\ImageViewModel.cs" />
+    <Compile Include="Models\LBPHRecognition.cs" />
+    <Compile Include="ViewModels\DatabaseImageViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RecognitionMethodsViewModel.cs" />
+    <Compile Include="Models\PCARecognition.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

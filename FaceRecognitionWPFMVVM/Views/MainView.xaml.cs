@@ -12,15 +12,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FaceRecognitionWPFMVVM
+namespace FaceRecognitionWPFMVVM.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
-        public MainWindow()
-        {
+        public MainView()
+        {            
             InitializeComponent();
         }
     }

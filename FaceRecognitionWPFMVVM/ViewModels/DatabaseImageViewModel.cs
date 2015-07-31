@@ -37,45 +37,38 @@ using System.Xml.Serialization;
 
 using FaceRecognitionWPFMVVM.Models;
 
-namespace FaceRecognitionWPFMVVM.ViewModel
+namespace FaceRecognitionWPFMVVM.ViewModels
 {
-    class CImageViewModel : ViewModelBase
+    class DatabaseImageViewModel : ViewModelBase
     {
+        // Указываем откуда будем брать данные.
         public CImage image;
 
-        public CImageViewModel( CImage _image)
+        public DatabaseImageViewModel( CImage _image)
         {
             this.image = _image;
         }
 
-        public Image<Bgr, Byte> bgrImage
+        #region Методы, которые отвечают как "биндить" поля формы данными класса CImage
+        // Методы - суть переменные XAML формы
+        public ImageSource bindPatchImage  
         {
-            get { return image.bgrImage;  }
+            get { return new BitmapImage(new Uri(image.path)); }
             set
-            {
-                image.bgrImage = value;
-                OnPropertyChanged("bgrImage");
+            {                
+                image.path = value.ToString();
+                OnPropertyChanged("bindPatchImage");
             }
         }
-
-        public Image<Gray, Byte> bgrImage
+        public string bindNameImage
         {
-            get { return image.grayImage; }
+            get { return image.name; }
             set
             {
-                image.grayImage = value;
-                OnPropertyChanged("grayImage");
+                image.name = value;
+                OnPropertyChanged("bindNameImage");
             }
         }
-
-        public string patch
-        {
-            get { return image.patch; }
-            set
-            {
-                image.patch = value;
-                OnPropertyChanged("patch");
-            }
-        }
+        #endregion 
     }
 }
